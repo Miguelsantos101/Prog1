@@ -1,0 +1,14 @@
+palavra = input()
+palavra_sep = []
+a = ""
+for a1 in range(len(palavra)):
+    palavra_sep = [str(a) for a in str(palavra)]
+
+for alpha in range(len(palavra_sep) // 2):
+    guarda_1_caractere = palavra_sep[alpha]
+    guarda_ultimo_caractere = palavra_sep[((len(palavra_sep) - 1) - alpha)]
+    palavra_sep[alpha] = guarda_ultimo_caractere
+    palavra_sep[((len(palavra_sep) - 1) - alpha)] = guarda_1_caractere
+
+print(a.join(palavra_sep))
+input()
